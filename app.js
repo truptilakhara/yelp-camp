@@ -15,8 +15,8 @@ const passport = require("passport");
 const passportLocal = require("passport-local");
 const User = require("./models/user");
 const mongoSanitize = require("express-mongo-sanitize");
-
-const db_url ='mongodb://localhost:27017/yelp-camp'
+const password = encodeURIComponent("yaBjlh4Tf0NvKCaG");
+const db_url = `mongodb+srv://truptilakhara:${password}@cluster0.cixwxze.mongodb.net/?retryWrites=true&w=majority`;
 const MongoStore = require("connect-mongo");
 const store = MongoStore.create({
   mongoUrl: db_url,
